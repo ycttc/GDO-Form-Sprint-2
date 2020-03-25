@@ -1,0 +1,108 @@
+<!DOCTYPE html>
+<!--By Yasmin Coker-->
+<html>
+<head>
+
+    <meta charset="utf-8">
+    <title>Sign Up For Girl's Day Out</title>
+	<link href="" rel="stylesheet">
+	
+	<style>
+	</style>
+	
+	<script>
+	</script>
+	
+	<h1>Sign Up for Girl's Day Out</h1>
+
+</head>
+<body>
+<form id="signInForm" action="FormProcessor.html" method="get">
+
+	<h2>Participant Information</h2>
+
+	<p><label for "lName"><span style="color:red;">*</span>Last Name: </label><input type="text" id="lName" required>
+	<label for "fName"><span style="color:red;">*</span>First Name: </label><input type="text" id="fName" required></p>
+	<p><label for "addr">Address: </label><input type="text" id="addr">
+	<label for "city">City: </label><input type="text" id="city">
+	<label for "state">State: </label><input type="text" id="state">
+	<label for "zip">Zip Code: </label><input type="number" id="zip" placeholder="00000" pattern="/^[0-9]{5,5}$/"></p>
+	<p><label for "phone"><span style="color:red;">*</span>Phone #: </label><input type="tel" id="phone"  placeholder="123-456-789" pattern="[0-9]{3}-[0-9]{3}-[0-9]{3}" required></p>
+	<p><label for "dob"><span style="color:red;">*</span>Date of Birth: </label><input type="date" id="date" required>
+	<label for "age">Age: </label><input type="number" id="age">
+	<label for "email"><span style="color:red;">*</span>Email Address: </label><input type="email" id="email" placeholder="email@example.com" required></p>
+	<p><label for "school"><span style="color:red;">*</span>School: </label><input type="text" id="school" required>
+	<label for "college">College of Interest: </label><input type="text" id="college"></p>
+	<p><label for "allerList">List of Allergies: </p></label><textarea id="allerList" rows="5" cols="50"></textarea>
+	
+	<fieldset id="shirtSelect">
+		<legend>Participant T-Shirt Size</legend>
+		<input type="radio" name="shirtSize">XS
+		<input type="radio" name="shirtSize">S
+		<input type="radio" name="shirtSize">M
+		<input type="radio" name="shirtSize">L
+		<input type="radio" name="shirtSize">XL
+		<input type="radio" name="shirtSize">XXL
+	</fieldset><br>
+	
+	
+	<fieldset id="stemSelect">
+		<legend>Tell us in which STEM areas you are interesed:</legend>
+		<input type="checkbox">Science
+		<input type="checkbox">Technology
+		<input type="checkbox">Engineering
+		<input type="checkbox">Mathematics
+	</fieldset>
+	
+	<h2>Parent/Guardian Information</h2>
+	<p><label for "pLName1"><span style="color:red;">*</span>Parent/Guardian Last Name: </label><input type="text" id="pLName1">
+	<label for "pFName1"><span style="color:red;">*</span>First Name: </label><input type="text" id="pFName1">
+	<label for "pEmail1"><span style="color:red;">*</span>Email Address: </label><input type="email" id="pEmail1" placeholder="email@example.com" required></p>
+	<p><label for "pAddr1"><span style="color:red;">*</span>Address: </label><input type="text" id="pAddr1">
+	<label for "pCity1"><span style="color:red;">*</span>City: </label><input type="text" id="pCity1">
+	<label for "pState1"><span style="color:red;">*</span>State: </label><input type="text" id="pState1">
+	<label for "pZip1"><span style="color:red;">*</span>Zip Code: </label><input type="number" id="pZip1" placeholder="00000" pattern="/^[0-9]{5,5}$/"></p>
+	<p><label for "priPhone1"><span style="color:red;">*</span>Primary Phone #: </label><input type="tel" id="priPhone1" required>
+	<label for "altPhone1">Alternate Phone #: </label><input type="tel" id="altPhone1">
+	
+	<p><label for "pLName2">Parent/Guardian Last Name: </label><input type="text" id="pLName2">
+	<label for "pFName2">First Name: </label><input type="text" id="pFName2">
+	<label for "pEmail2">Email Address: </label><input type="email" id="pEmail2" placeholder="email@example.com"></p>
+	<p><label for "pAddr2">Address: </label><input type="text" id="pAddr2">
+	<label for "pCity2">City: </label><input type="text" id="pCity2">
+	<label for "pState2">State: </label><input type="text" id="pState2">
+	<label for "pZip2">Zip Code: </label><input type="number" id="pZip2" placeholder="00000" pattern="/^[0-9]{5,5}$/"></p>
+	<p><label for "priPhone2">Primary Phone #: </label><input type="tel" id="priPhone2">
+	<label for "altPhone2">Alternate Phone #: </label><input type="tel" id="altPhone2">
+
+	<h2>Emergency Contact and Release Authorization</h2>
+	<p><label for "emName">Name: </label><input type="text" id="emName">
+	<label for "relationship">Relationship to child: </label><input type="text" id="relationship"></p>
+	<p><label for "emAddr">Address: </label><input type="text" id="emAddr">
+	<label for "emCity">City: </label><input type="text" id="emCity">
+	<label for "emState">State: </label><input type="text" id="emState">
+	<label for "emZip">Zip Code: </label><input type="number" id="emZip" placeholder="00000" pattern="/^[0-9]{5,5}$/"></p>
+	<p><label for "emPriPhone">Primary Phone #: </label><input type="tel" id="emPriPhone">
+	<label for "emAltPhone">Alternate Phone #: </label><input type="tel" id="emAltPhone">
+	
+	<h2>Food Allergy Notice</h2>
+	<p>All students must select whether or not participant has food allergies and have a signed food allergy notice on file to participate.</p>
+	
+	<fieldset id="allerSelect">
+		<legend><span style="color:red;">*</span>Participant Food Allergies</legend>
+		<input type="radio" name="allergies" required><b>No</b>, the participant <b>does not</b> have any food allergies.<br>
+		<input type="radio" name="allergies"><b>Yes</b>, the participant <b>has a</b> food allergy.
+	</fieldset><br>
+	
+	<p><label for "dietRes">List food allergies or relevant dietary restrictions: </p><textarea id="dietRes" rows="5" cols="80"></textarea><br>
+	<p><label for "dietSub">List any available dietary substitutions: </p><textarea id="dietSub" rows="5" cols="80"></textarea><br>
+	
+
+	
+	<p><input type="submit" value="Submit Information" id="submitBtn"></p>
+
+
+</form>
+</body>
+</html>
+	
